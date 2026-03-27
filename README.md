@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hamba Rides Website 🇿🇦
 
-## Getting Started
+Your Journey, Our Pride. South Africa's premier ride-hailing service.
 
-First, run the development server:
+## About Hamba Rides
+
+Hamba Rides is a proudly South African ride-hailing platform that provides safe, affordable, and reliable transportation across the country. Founded in 2026, we're committed to supporting local drivers and creating better transportation solutions for all South Africans.
+
+## Features
+
+- 🚗 **Economy & Standard Rides** - Choose your preferred ride type
+- 👩 **Women-Only Rides** - Female riders can request women drivers
+- 💳 **Multiple Payment Options** - Card, cash, and mobile money
+- 📍 **Real-Time Tracking** - Track your driver in real-time
+- 🛡️ **Safety First** - Verified drivers and 24/7 support
+- ⭐ **Rating System** - Mutual rating for quality service
+
+## Pricing
+
+- **Economy**: R25 base + R8/km
+- **Standard**: R35 base + R12/km
+
+## Contact
+
+- **Email**: info@hambarides.co.za
+- **Phone**: +27 63 025 1274
+- **Location**: Johannesburg, South Africa
+
+## Local Development
+
+To run the website locally:
+
+1. Clone this repository
+2. Navigate to the website folder
+3. Run a local server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Using Python
+python -m http.server 8080
+
+# Or using Node.js
+npx serve .
+
+# Or any other static server
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open http://localhost:8080 in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This website is designed for static hosting and can be deployed on:
 
-## Learn More
+- **Vercel** (Recommended)
+- **Netlify**
+- **GitHub Pages**
+- **Any static hosting service**
 
-To learn more about Next.js, take a look at the following resources:
+### Vercel Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Push your code to GitHub
+2. Connect your GitHub account to Vercel
+3. Import the repository
+4. Vercel will automatically detect it's a static site
+5. Deploy!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## File Structure
 
-## Deploy on Vercel
+```
+website/
+├── index.html          # Homepage
+├── about.html          # About page
+├── services.html       # Services page
+├── drivers.html        # Driver recruitment
+├── safety.html         # Safety information
+├── faq.html           # Frequently asked questions
+├── contact.html        # Contact page
+├── styles.css          # Main stylesheet
+├── script.js           # JavaScript functionality
+├── images/             # Image assets
+│   ├── logo.png
+│   ├── rider-app-mockup.png
+│   └── driver-app-mockup.png
+├── app/                # Next.js pages (if needed)
+└── legal/              # Legal pages
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork the repository
+2. Create your feature branch
+3. Make your changes
+4. Test locally
+5. Commit and push
+6. Create a Pull Request
+
+## License
+
+© 2026 Hamba Rides. All rights reserved.
+
+---
+
+🇿🇦 Proudly South African

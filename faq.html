@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hamba Rides FAQ - Frequently asked questions about rides, payments, safety, driver requirements, and more.">
+    <title>FAQ - Hamba Rides 🇿🇦</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Hamba Rides" class="logo-img" width="180" height="50">
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="safety.html">Safety</a>
+                    <a href="drivers.html">Become a Driver</a>
+                    <a href="faq.html" class="active">FAQ</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="nav-buttons">
+                    <a href="index.html#download" class="btn btn-outline">Get Started</a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Frequently Asked Questions</h1>
+            <p class="page-subtitle">Find answers to common questions about Hamba Rides</p>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="content-section">
+        <div class="container">
+            <div class="faq-categories">
+                <button class="faq-category-btn active" onclick="showCategory('riders')">For Riders</button>
+                <button class="faq-category-btn" onclick="showCategory('drivers')">For Drivers</button>
+                <button class="faq-category-btn" onclick="showCategory('payments')">Payments</button>
+                <button class="faq-category-btn" onclick="showCategory('safety')">Safety</button>
+            </div>
+
+            <!-- Riders FAQ -->
+            <div id="riders" class="faq-category-content active">
+                <h2 class="section-title">For Riders</h2>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>How do I book a ride?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Booking a ride is simple:</p>
+                            <ol>
+                                <li>Open the Hamba Rides app</li>
+                                <li>Enter your destination</li>
+                                <li>Choose Economy or Standard ride type</li>
+                                <li>Toggle "Women-Only" if desired (for female riders)</li>
+                                <li>Confirm your pickup location</li>
+                                <li>Review the fare and tap "Request Ride"</li>
+                                <li>Track your driver in real-time as they arrive</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>What's the difference between Economy and Standard?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Economy (R8/km):</strong> Standard sedan vehicles with air conditioning, perfect for everyday rides and budget-conscious travelers.</p>
+                            <p><strong>Standard (R12/km):</strong> Premium vehicles with extra legroom, top-rated drivers (4.8+ rating), complimentary water, and phone charging cables. Ideal for business trips or special occasions.</p>
+                            <p>Both options include women-only rides at no extra cost.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>What is the women-only ride option?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our women-only ride feature allows female riders to request female drivers for added comfort and safety. Simply toggle the "Women-Only" option when booking your ride.</p>
+                            <p>This feature is available on both Economy and Standard rides at no additional cost. All female drivers undergo additional verification and safety training.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>How do I know my fare before booking?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Hamba Rides provides upfront pricing. Before you confirm your ride, you'll see the exact fare based on:</p>
+                            <ul>
+                                <li>Distance to your destination</li>
+                                <li>Current traffic conditions</li>
+                                <li>Ride type (Economy or Standard)</li>
+                                <li>Any applicable surge pricing during peak hours</li>
+                            </ul>
+                            <p>There are no hidden fees - what you see is what you pay.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>Can I schedule a ride in advance?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! You can schedule rides up to 7 days in advance. This is perfect for airport pickups, early morning meetings, or any time you need guaranteed transportation.</p>
+                            <p>To schedule: Select your pickup time when booking, and a driver will be assigned 15 minutes before your scheduled time.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>What if I left something in the car?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>If you left an item in your ride:</p>
+                            <ol>
+                                <li>Go to your trip history in the app</li>
+                                <li>Select the ride where you left the item</li>
+                                <li>Tap "I lost an item"</li>
+                                <li>Describe the item and provide contact details</li>
+                                <li>We'll connect you with your driver to arrange return</li>
+                            </ol>
+                            <p>You can also contact our support team at info@hambarides.co.za</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>Can I bring pets?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Service animals are always welcome. For other pets, you must:</p>
+                            <ul>
+                                <li>Contact the driver before they arrive to get approval</li>
+                                <li>Keep pets in appropriate carriers</li>
+                                <li>Be responsible for any damage or cleaning fees</li>
+                            </ul>
+                            <p>Drivers have the right to refuse pets (except service animals).</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>How many passengers can ride?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Both Economy and Standard rides accommodate up to 4 passengers. All passengers must have seatbelts available.</p>
+                            <p>For larger groups, you can book multiple rides simultaneously.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drivers FAQ -->
+            <div id="drivers" class="faq-category-content">
+                <h2 class="section-title">For Drivers</h2>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>How much do drivers earn?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Drivers keep <strong>79% of every fare</strong> - one of the best rates in the industry. Hamba takes 21% to cover insurance, support, technology, and platform costs.</p>
+                            <p>Average earnings:</p>
+                            <ul>
+                                <li>Part-time (20 hrs/week): R8,000 - R12,000/month</li>
+                                <li>Full-time (40 hrs/week): R15,000 - R25,000/month</li>
+                                <li>Peak hours/high demand: R20,000 - R35,000/month</li>
+                            </ul>
+                            <p>Plus bonuses, incentives, and peak hour multipliers!</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>What are the requirements to become a driver?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Driver Requirements:</strong></p>
+                            <ul>
+                                <li>At least 21 years old</li>
+                                <li>Valid SA driver's license</li>
+                                <li>Minimum 2 years driving experience</li>
+                                <li>Professional Driving Permit (PrDP)</li>
+                                <li>Clean criminal record</li>
+                            </ul>
+                            <p><strong>Vehicle Requirements:</strong></p>
+                            <ul>
+                                <li>4-door sedan or SUV</li>
+                                <li>Model year 2015 or newer</li>
+                                <li>Valid registration and comprehensive insurance</li>
+                                <li>Good condition with air conditioning</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>When and how do I get paid?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Payments are processed <strong>every Monday</strong> for the previous week's earnings (Monday to Sunday).</p>
+                            <p>Money is deposited directly into your bank account. You can track your earnings in real-time through the driver app and see detailed breakdowns of each trip.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>Can I drive part-time?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely! There are no minimum hour requirements. Drive as much or as little as you want:</p>
+                            <ul>
+                                <li>Full-time (40+ hours/week)</li>
+                                <li>Part-time (10-30 hours/week)</li>
+                                <li>Weekends only</li>
+                                <li>Just a few hours after work</li>
+                            </ul>
+                            <p>You control your schedule completely.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>What insurance coverage is provided?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>While you're actively driving for Hamba (from pickup to drop-off), you and your passengers are covered by our comprehensive insurance policy.</p>
+                            <p>This includes:</p>
+                            <ul>
+                                <li>Third-party liability coverage</li>
+                                <li>Passenger injury protection</li>
+                                <li>Vehicle damage coverage</li>
+                            </ul>
+                            <p>You must also maintain your own comprehensive vehicle insurance.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>How long does the application process take?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The typical timeline is:</p>
+                            <ul>
+                                <li><strong>Application review:</strong> 24 hours</li>
+                                <li><strong>Background checks:</strong> 3-5 business days</li>
+                                <li><strong>Training/orientation:</strong> 1-2 hours (online or in-person)</li>
+                                <li><strong>Activation:</strong> Same day after training</li>
+                            </ul>
+                            <p>Most drivers are approved and driving within 1 week of applying.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payments FAQ -->
+            <div id="payments" class="faq-category-content">
+                <h2 class="section-title">Payments</h2>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>What payment methods are accepted?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We accept multiple payment methods:</p>
+                            <ul>
+                                <li><strong>Credit/Debit Cards:</strong> Visa, Mastercard, American Express</li>
+                                <li><strong>Mobile Money:</strong> Popular mobile payment platforms</li>
+                                <li><strong>Cash:</strong> Pay your driver directly</li>
+                            </ul>
+                            <p>All card payments are encrypted and secure. You can save multiple payment methods in your account.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>Is my payment information secure?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We use industry-standard encryption and never store your full card details. All transactions are processed through secure, PCI-compliant payment gateways.</p>
+                            <p>Your financial information is protected with:</p>
+                            <ul>
+                                <li>256-bit SSL encryption</li>
+                                <li>Tokenized card storage</li>
+                                <li>Two-factor authentication</li>
+                                <li>Fraud detection systems</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>Can I get a receipt for my ride?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! You automatically receive a digital receipt via email after every ride. The receipt includes:</p>
+                            <ul>
+                                <li>Date and time of ride</li>
+                                <li>Pickup and drop-off locations</li>
+                                <li>Distance traveled</li>
+                                <li>Fare breakdown</li>
+                                <li>Driver details</li>
+                                <li>Payment method used</li>
+                            </ul>
+                            <p>You can also access all receipts in your trip history within the app.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>What is surge pricing?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>During periods of very high demand (rush hour, bad weather, special events), prices may temporarily increase to ensure ride availability. This is called surge pricing.</p>
+                            <p>You'll always see the exact fare before confirming your ride. Surge pricing helps:</p>
+                            <ul>
+                                <li>Get more drivers on the road</li>
+                                <li>Reduce wait times</li>
+                                <li>Ensure ride availability when you need it</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>How do I add or change my payment method?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>To manage payment methods:</p>
+                            <ol>
+                                <li>Open the Hamba Rides app</li>
+                                <li>Go to Menu → Payment Methods</li>
+                                <li>Tap "Add Payment Method"</li>
+                                <li>Enter your card details or select mobile money</li>
+                                <li>Set as default if desired</li>
+                            </ol>
+                            <p>You can store multiple payment methods and switch between them for each ride.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>What if I'm charged incorrectly?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>If you believe you were charged incorrectly:</p>
+                            <ol>
+                                <li>Check your trip receipt for fare breakdown</li>
+                                <li>Go to trip history and select the ride</li>
+                                <li>Tap "Report a problem" → "Fare issue"</li>
+                                <li>Describe the issue</li>
+                                <li>Our team will review within 24 hours</li>
+                            </ol>
+                            <p>If an error is confirmed, you'll receive a refund to your original payment method within 3-5 business days.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Safety FAQ -->
+            <div id="safety" class="faq-category-content">
+                <h2 class="section-title">Safety</h2>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>How are drivers verified?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Every Hamba driver undergoes comprehensive screening:</p>
+                            <ul>
+                                <li><strong>Criminal background check:</strong> National criminal record verification</li>
+                                <li><strong>Driving history:</strong> Review of traffic violations and accidents</li>
+                                <li><strong>Identity verification:</strong> ID/passport validation</li>
+                                <li><strong>License verification:</strong> Valid driver's license and PrDP</li>
+                                <li><strong>Vehicle inspection:</strong> Safety and condition check</li>
+                                <li><strong>Reference checks:</strong> Personal and professional references</li>
+                            </ul>
+                            <p>Drivers are continuously monitored and must maintain high ratings.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>What should I do in an emergency?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>If you feel unsafe or have an emergency:</p>
+                            <ol>
+                                <li><strong>Use the SOS button:</strong> Tap the emergency button in the app</li>
+                                <li><strong>Call emergency services:</strong> Dial 10111 (police) or 10177 (ambulance)</li>
+                                <li><strong>Share your location:</strong> Your trip details are automatically shared with emergency contacts</li>
+                                <li><strong>Contact our safety team:</strong> 24/7 emergency line: 0800 123 456</li>
+                            </ol>
+                            <p>Your safety is our top priority. Don't hesitate to use emergency features.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>Can I share my trip with someone?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! Trip sharing is a key safety feature. You can share your real-time location and trip details with up to 5 trusted contacts.</p>
+                            <p>To share a trip:</p>
+                            <ol>
+                                <li>Tap "Share Trip" before or during your ride</li>
+                                <li>Select contacts from your phone</li>
+                                <li>They'll receive a link to track your journey in real-time</li>
+                                <li>Sharing automatically ends when you arrive</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>How do I report a safety concern?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Report any safety issues immediately:</p>
+                            <ul>
+                                <li><strong>In-app:</strong> Go to trip history → Select ride → "Report issue"</li>
+                                <li><strong>Email:</strong> safety@hambarides.co.za</li>
+                                <li><strong>Phone:</strong> 24/7 safety line: 0800 123 456</li>
+                            </ul>
+                            <p>All reports are taken seriously and investigated within 24 hours. Drivers can be suspended or deactivated based on safety violations.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-accordion">
+                        <button class="faq-question">
+                            <span>What is the rating system?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>After each ride, both riders and drivers rate each other on a 5-star scale. This helps maintain quality and safety:</p>
+                            <ul>
+                                <li>Drivers with consistently low ratings (below 4.6) are reviewed and may be deactivated</li>
+                                <li>Riders with low ratings may have limited access to drivers</li>
+                                <li>You can see your driver's rating before accepting the ride</li>
+                                <li>Ratings help us identify and address issues quickly</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Have Questions -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="section-title text-center">Still Have Questions?</h2>
+            <p class="section-subtitle text-center">Our support team is here to help 24/7</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary btn-large">Contact Support</a>
+                <a href="safety.html" class="btn btn-secondary btn-large">Safety Center</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo-text">Hamba Rides</div>
+                    <p class="footer-description">Your Journey, Our Pride. South Africa's premier ride-hailing service.</p>
+                    <div class="footer-flag">🇿🇦 Proudly South African</div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="safety.html">Safety</a></li>
+                        <li><a href="drivers.html">Become a Driver</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="safety.html">Safety Center</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                        <li><a href="acceptable-use.html">Acceptable Use</a></li>
+                        <li><a href="community-guidelines.html">Community Guidelines</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hamba Rides. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // FAQ Category Switching
+        function showCategory(category) {
+            // Hide all categories
+            document.querySelectorAll('.faq-category-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active from all buttons
+            document.querySelectorAll('.faq-category-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected category
+            document.getElementById(category).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item-accordion').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-icon').textContent = '+';
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    button.querySelector('.faq-icon').textContent = '−';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

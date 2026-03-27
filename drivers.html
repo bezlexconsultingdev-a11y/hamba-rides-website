@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Become a Hamba Rides driver - Earn 79% of fares, flexible schedule, weekly payouts. Join South Africa's premier ride-hailing platform. +27 63 025 1274">
+    <title>Become a Driver - Hamba Rides 🇿🇦</title>
+    <link rel="stylesheet" href="styles.css">
+    
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Hamba Rides" class="logo-img" width="180" height="50">
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="safety.html">Safety</a>
+                    <a href="drivers.html" class="active">Become a Driver</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="nav-buttons">
+                    <a href="#apply" class="btn btn-outline">Apply Now</a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="driver-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Drive with Hamba, <br><span class="gradient-text">Earn on Your Terms</span></h1>
+                    <p class="hero-subtitle">Join thousands of drivers earning great money with flexible hours. Keep 79% of your fares and get paid weekly.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                           
+                            <div class="stat-label">Driver Earnings</div>
+                        </div>
+                       
+                    <a href="#apply" class="btn btn-primary btn-large">Start Earning Today</a>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Drive -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title text-center">Why Drive with Hamba?</h2>
+            <p class="section-subtitle text-center">The best platform for South African drivers</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Competitive Earnings</h3>
+                    <p><strong>Keep 79% of every fare</strong> - one of the best rates in the industry. Plus earn bonuses during peak hours and special promotions.</p>
+                    <div class="earnings-example">
+                        <strong>Example:</strong> R1,000 in fares = R790 for you
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📅</div>
+                    <h3>Complete Flexibility</h3>
+                    <p><strong>Drive when you want</strong> - no minimum hours, no schedules. Work full-time, part-time, or just a few hours a week. You're in control.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">💳</div>
+                    <h3>Weekly Payouts</h3>
+                    <p><strong>Get paid every week</strong> directly to your bank account. Track your earnings in real-time and cash out when you need to.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Insurance Coverage</h3>
+                    <p><strong>Comprehensive insurance</strong> while you drive. You and your passengers are covered from pickup to drop-off.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📱</div>
+                    <h3>Easy-to-Use App</h3>
+                    <p><strong>Simple, intuitive driver app</strong> with built-in navigation, earnings tracker, and instant support.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎁</div>
+                    <h3>Bonuses & Incentives</h3>
+                    <p><strong>Earn extra money</strong> with peak hour bonuses, referral rewards, and driver loyalty programs.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>24/7 Support</h3>
+                    <p><strong>Always here to help</strong> with dedicated driver support team available around the clock.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Performance Insights</h3>
+                    <p><strong>Track your success</strong> with detailed analytics, ratings, and tips to maximize your earnings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Earnings Calculator -->
+    <section class="earnings-section">
+        <div class="container">
+            <h2 class="section-title text-center">Calculate Your Potential Earnings</h2>
+            <p class="section-subtitle text-center">See how much you could earn driving with Hamba</p>
+            
+            <div class="calculator-container">
+                <div class="calculator-inputs-grid">
+                    <div class="input-group">
+                        <label>Hours per week</label>
+                        <input type="number" id="hoursPerWeek" value="40" min="1" max="80">
+                    </div>
+                    <div class="input-group">
+                        <label>Average fare per hour</label>
+                        <select id="farePerHour">
+                            <option value="150">R150 (Low demand)</option>
+                            <option value="200" selected>R200 (Average)</option>
+                            <option value="250">R250 (High demand)</option>
+                            <option value="300">R300 (Peak hours)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary" onclick="calculateEarnings()">Calculate Earnings</button>
+                
+                <div class="earnings-results">
+                    <div class="earnings-breakdown">
+                        <div class="earnings-item">
+                            <span class="earnings-label">Weekly Gross Fares:</span>
+                            <span class="earnings-value" id="weeklyGross">R8,000</span>
+                        </div>
+                        <div class="earnings-item highlight">
+                            <span class="earnings-label">Your Weekly Earnings (79%):</span>
+                            <span class="earnings-value" id="weeklyEarnings">R6,320</span>
+                        </div>
+                        <div class="earnings-item">
+                            <span class="earnings-label">Monthly Earnings:</span>
+                            <span class="earnings-value large" id="monthlyEarnings">R25,280</span>
+                        </div>
+                    </div>
+                    <p class="calculator-note">*Estimates based on average conditions. Actual earnings may vary based on location, time, and demand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Driver Requirements</h2>
+            <p class="section-subtitle text-center">Make sure you meet these requirements before applying</p>
+            
+            <div class="requirements-grid">
+                <div class="requirement-category">
+                    <h3>👤 Driver Requirements</h3>
+                    <ul class="check-list">
+                        <li>At least 21 years old</li>
+                        <li>Valid South African driver's license</li>
+                        <li>Minimum 2 years driving experience</li>
+                        <li>Clean criminal record</li>
+                        <li>Professional Driving Permit (PrDP)</li>
+                        <li>Good communication skills</li>
+                    </ul>
+                </div>
+
+                <div class="requirement-category">
+                    <h3>🚗 Vehicle Requirements</h3>
+                    <ul class="check-list">
+                        <li>4-door sedan or SUV</li>
+                        <li>Model year 2015 or newer</li>
+                        <li>Good condition (no damage)</li>
+                        <li>Valid vehicle license</li>
+                        <li>Comprehensive insurance</li>
+                        <li>Air conditioning</li>
+                    </ul>
+                </div>
+
+                <div class="requirement-category">
+                    <h3>📄 Documents Needed</h3>
+                    <ul class="check-list">
+                        <li>South African ID or passport</li>
+                        <li>Driver's license (front & back)</li>
+                        <li>Professional Driving Permit</li>
+                        <li>Vehicle registration papers</li>
+                        <li>Proof of insurance</li>
+                        <li>Bank account details</li>
+                    </ul>
+                </div>
+
+                <div class="requirement-category">
+                    <h3>✅ Background Checks</h3>
+                    <ul class="check-list">
+                        <li>Criminal record check</li>
+                        <li>Driving history verification</li>
+                        <li>Reference checks</li>
+                        <li>Vehicle inspection</li>
+                        <li>Identity verification</li>
+                        <li>Safety training completion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Get Started -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title text-center">How to Get Started</h2>
+            <p class="section-subtitle text-center">4 simple steps to start earning</p>
+            
+            <div class="steps-vertical">
+                <div class="step-vertical">
+                    <div class="step-number-large">1</div>
+                    <div class="step-content-large">
+                        <h3>Apply Online</h3>
+                        <p>Fill out our simple online application form. Takes less than 10 minutes. We'll review your application within 24 hours.</p>
+                    </div>
+                </div>
+
+                <div class="step-vertical">
+                    <div class="step-number-large">2</div>
+                    <div class="step-content-large">
+                        <h3>Upload Documents</h3>
+                        <p>Submit your required documents through our secure portal. Our team will verify everything and conduct background checks.</p>
+                    </div>
+                </div>
+
+                <div class="step-vertical">
+                    <div class="step-number-large">3</div>
+                    <div class="step-content-large">
+                        <h3>Complete Training</h3>
+                        <p>Attend a short orientation session (online or in-person) to learn about the app, safety protocols, and best practices.</p>
+                    </div>
+                </div>
+
+                <div class="step-vertical">
+                    <div class="step-number-large">4</div>
+                    <div class="step-content-large">
+                        <h3>Start Driving</h3>
+                        <p>Download the driver app, go online, and start accepting rides. It's that simple! Support is available 24/7.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Driver Stories -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Driver Success Stories</h2>
+            <p class="section-subtitle text-center">Hear from our driver community</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"I've been driving with Hamba for 6 months and it's been life-changing. The 79% commission is the best in the industry, and I love the flexibility to work when I want."</p>
+                    <div class="testimonial-author">
+                        <strong>Thabo M.</strong>
+                        <span>Johannesburg • 6 months</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"As a female driver, I appreciate the women-only ride option. It makes me feel safer and my passengers more comfortable. The info@hambarides.co.za support team is always there when I need them."</p>
+                    <div class="testimonial-author">
+                        <strong>Naledi K.</strong>
+                        <span>Cape Town • 1 year</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"I drive part-time while studying and earn enough to cover my expenses. The app is easy to use and weekly payouts help me manage my budget. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <strong>Sipho N.</strong>
+                        <span>Durban • 8 months</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section id="apply" class="content-section">
+        <div class="container">
+            <h2 class="section-title text-center">Apply to Drive with Hamba</h2>
+            <p class="section-subtitle text-center">Start your journey to financial freedom</p>
+            
+            <div class="application-form-container">
+                <form id="driverApplicationForm" class="application-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name *</label>
+                            <input type="text" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name *</label>
+                            <input type="text" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>City *</label>
+                            <select name="city" required>
+                                <option value="">Select your city</option>
+                                <option value="johannesburg">Johannesburg</option>
+                                <option value="cape-town">Cape Town</option>
+                                <option value="durban">Durban</option>
+                                <option value="pretoria">Pretoria</option>
+                                <option value="port-elizabeth">Port Elizabeth</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Years of Driving Experience *</label>
+                            <select name="experience" required>
+                                <option value="">Select experience</option>
+                                <option value="2-3">2-3 years</option>
+                                <option value="4-5">4-5 years</option>
+                                <option value="6-10">6-10 years</option>
+                                <option value="10+">10+ years</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Vehicle Make & Model *</label>
+                            <input type="text" name="vehicle" placeholder="e.g., Toyota Corolla" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Vehicle Year *</label>
+                            <input type="number" name="year" min="2015" max="2026" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="prdp" required>
+                            I have a valid Professional Driving Permit (PrDP)
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="insurance" required>
+                            My vehicle has comprehensive insurance
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="terms" required>
+                            I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Submit Application</button>
+                    
+                    <p class="form-note">We'll review your application within 24 hours and contact you with next steps.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Driver FAQs</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>How much can I earn?</h4>
+                    <p>Earnings vary based on hours worked, location, and demand. On average, drivers earn R15,000-R25,000 per month working full-time. You keep 79% of all fares.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>When do I get paid?</h4>
+                    <p>Payments are processed weekly, every Monday, directly to your bank account. You can track your earnings in real-time through the driver app.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do I need my own car?</h4>
+                    <p>Yes, you need access to a qualifying vehicle (2015 or newer, 4-door sedan or SUV) with comprehensive insurance and valid registration.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What are the working hours?</h4>
+                    <p>There are no set hours! Drive whenever you want - mornings, evenings, weekends, or just a few hours a week. You're completely in control of your schedule.</p>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="faq.html" class="btn btn-outline">View All FAQs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo-text">Hamba Rides</div>
+                    <p class="footer-description">Your Journey, Our Pride. South Africa's premier ride-hailing service.</p>
+                    <div class="footer-flag">🇿🇦 Proudly South African</div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="safety.html">Safety</a></li>
+                        <li><a href="drivers.html">Become a Driver</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="safety.html">Safety Center</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                        <li><a href="acceptable-use.html">Acceptable Use</a></li>
+                        <li><a href="community-guidelines.html">Community Guidelines</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hamba Rides. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function calculateEarnings() {
+            const hours = parseFloat(document.getElementById('hoursPerWeek').value) || 40;
+            const farePerHour = parseFloat(document.getElementById('farePerHour').value) || 200;
+            
+            const weeklyGross = hours * farePerHour;
+            const weeklyEarnings = weeklyGross * 0.79;
+            const monthlyEarnings = weeklyEarnings * 4;
+            
+            document.getElementById('weeklyGross').textContent = `R${weeklyGross.toLocaleString()}`;
+            document.getElementById('weeklyEarnings').textContent = `R${weeklyEarnings.toLocaleString()}`;
+            document.getElementById('monthlyEarnings').textContent = `R${monthlyEarnings.toLocaleString()}`;
+        }
+
+        document.getElementById('driverApplicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your application! We will review it within 24 hours and contact you with next steps.');
+            this.reset();
+        });
+
+        // Calculate on page load
+        calculateEarnings();
+    </script>
+</body>
+</html>
