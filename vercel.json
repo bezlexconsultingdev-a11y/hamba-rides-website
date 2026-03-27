@@ -1,7 +1,20 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "index.html",
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "styles.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "script.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "images/**/*",
       "use": "@vercel/static"
     }
   ],
@@ -9,6 +22,58 @@
     {
       "src": "/",
       "dest": "/index.html"
+    },
+    {
+      "src": "/about",
+      "dest": "/about.html"
+    },
+    {
+      "src": "/services",
+      "dest": "/services.html"
+    },
+    {
+      "src": "/drivers",
+      "dest": "/drivers.html"
+    },
+    {
+      "src": "/safety",
+      "dest": "/safety.html"
+    },
+    {
+      "src": "/faq",
+      "dest": "/faq.html"
+    },
+    {
+      "src": "/contact",
+      "dest": "/contact.html"
+    },
+    {
+      "src": "/privacy",
+      "dest": "/privacy.html"
+    },
+    {
+      "src": "/terms",
+      "dest": "/terms.html"
+    },
+    {
+      "src": "/refund",
+      "dest": "/refund.html"
+    },
+    {
+      "src": "/acceptable-use",
+      "dest": "/acceptable-use.html"
+    },
+    {
+      "src": "/community-guidelines",
+      "dest": "/community-guidelines.html"
+    },
+    {
+      "src": "/accessibility",
+      "dest": "/accessibility.html"
+    },
+    {
+      "src": "/cookies",
+      "dest": "/cookies.html"
     },
     {
       "src": "/(.*)",
